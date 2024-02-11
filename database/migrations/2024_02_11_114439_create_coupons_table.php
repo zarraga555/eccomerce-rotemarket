@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('coupon_end_date')->nullable();
             $table->integer('maximum_use_limit')->nullable();
             $table->boolean('state')->default(1);
-            $table->foreignId('creat_by')->nullable()->constrained('users');
+            $table->foreignId('created_by')->nullable()->constrained('users');
             $table->timestamps();
             $table->softDeletes();
         });
