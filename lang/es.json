@@ -61,5 +61,13 @@
     "Purchase price including taxes > Profit margin in % > Sale Price" : "Preco de compra incluyendo los impuestos > margen de ganancia > Precio de venta",
     "purchase price" : "Precio de compra",
     "margin of price" : "Margen de ganancia",
-    "Sale Price" : "Precio de venta"
+    "Sale Price" : "Precio de venta",
+    "Coupon" : "Cupon",
+    "Coupon code" : "Codigo del Cupon",
+    "Percentage discount" : "Porcentaje de descuento",
+    "Money discount" : "Descuento en dinero",
+    "Coupon expiration" : "Vencimiento del cupon",
+    "Maximum coupon usage limit" : "Cantidad maximo de uso del cupon",
+    "Will the coupon be available?" : "¿El cupon esta disponible?",
+    "Coupons" : "Cupones"
 }
