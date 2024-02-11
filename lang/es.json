@@ -69,5 +69,6 @@
     "Coupon expiration" : "Vencimiento del cupon",
     "Maximum coupon usage limit" : "Cantidad maximo de uso del cupon",
     "Will the coupon be available?" : "¿El cupon esta disponible?",
-    "Coupons" : "Cupones"
+    "Coupons" : "Cupones",
+    "Create Coupon" : "Crear Cupon"
 }
