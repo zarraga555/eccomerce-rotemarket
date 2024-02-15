@@ -4,6 +4,7 @@ namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
 use App\Models\Brands;
+use App\Models\Coupons;
 use App\Models\Categories;
 use App\Models\CategoryDepartment;
 use App\Models\Products;
@@ -18,6 +19,7 @@ use App\Policies\RolePolicy;
 use App\Policies\SubCategoriesPolicy;
 use App\Policies\UnitsPolicy;
 use App\Policies\UserPolicy;
+use App\Policies\CouponsPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Spatie\Permission\Models\Role;
 
@@ -36,7 +38,8 @@ class AuthServiceProvider extends ServiceProvider
         SubCategories::class        => SubCategoriesPolicy::class,
         Brands::class               => BrandsPolicy::class,
         Products::class             => ProductsPolicy::class,
-        Units::class                => UnitsPolicy::class
+        Units::class                => UnitsPolicy::class,
+        Coupons::class              => CouponsPolicy::class,
     ];
 
     /**
