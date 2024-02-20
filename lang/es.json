@@ -92,5 +92,6 @@
     "Lastname" : "Apellidos",
     "Names" : "Nombres",
     "Employee" : "Empleado",
-    "Suppliers" : "Proveedores"
+    "Suppliers" : "Proveedores",
+    "Contacts" : "Contactos"
 }
