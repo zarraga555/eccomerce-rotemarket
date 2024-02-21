@@ -27,4 +27,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-// No se que pedo pe
+// No se que mierda estoy haciendo
