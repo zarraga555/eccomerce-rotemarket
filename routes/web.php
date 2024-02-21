@@ -27,4 +27,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-// No se que mierda estoy haciendo
+// Me gileo
