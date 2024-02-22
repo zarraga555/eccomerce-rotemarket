@@ -26,4 +26,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-// hola
+
+// Me gileo x2
