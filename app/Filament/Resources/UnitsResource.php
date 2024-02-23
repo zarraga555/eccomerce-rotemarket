@@ -24,7 +24,7 @@ class UnitsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Hidden::make('created_by')
+                Forms\Components\Hidden::make('creat_by')
                     ->default(Auth::id())
                     ->label(__('Created by')),
                 Forms\Components\TextInput::make('name')
