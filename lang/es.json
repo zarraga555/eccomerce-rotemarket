@@ -121,5 +121,13 @@
     "Login" : "Iniciar Sesion",
     "Browse" : "Explora las",
     "Show more..." : "Mostrar mas",
-    "Deals" : "Ofertas del dia"
+    "Deals" : "Ofertas del dia",
+    "The link you clicked may be broken or the page may have been removed." : "Es posible que el enlace en el que hizo clic esté roto o que la página haya sido eliminada.",
+    "visit the" : "ve al",
+    "Homepage" : "Inicio",
+    "or" : "o",
+    "about the problem" : "sobre el problema",
+    "Contact us" : "Contacta con nosotros",
+    "Back To Home Page" : "Volver a la página de inicio",
+    "Page Not Found" : "Página no encontrada"
 }
