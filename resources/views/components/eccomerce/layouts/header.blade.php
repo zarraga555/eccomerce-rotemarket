@@ -7,7 +7,7 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src="{{ asset('/image/logo/rotemarket_logo.png') }}" alt="logo"/></a>
+                    <a href="index.html"><x-eccomerce.layouts.logo/></a>
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
@@ -76,7 +76,8 @@
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
                 <div class="logo logo-width-1 d-block d-lg-none">
-                    <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo"/></a>
+                    <a href="index.html"><x-eccomerce.layouts.logo style="width: 100px;
+                        min-width: 100px;"/></a>
                 </div>
                 <div class="header-nav d-none d-lg-flex">
                     <x-eccomerce.layouts.header.bottomheader.categories/>
