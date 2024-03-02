@@ -1,0 +1,1 @@
+<img {{ $attributes }} src="{{ asset('/image/logo/rotemarket_logo.png') }}" alt="logo"/>
