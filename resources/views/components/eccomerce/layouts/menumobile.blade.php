@@ -2,7 +2,8 @@
     <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-top">
             <div class="mobile-header-logo">
-                <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo"/></a>
+                <a href="index.html"><img src="{{ asset('/image/logo/rotemarket_logo.png') }}" alt="logo" style="    min-width: 100px !important;
+                    width: 100px;"/></a>
             </div>
             <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                 <button class="close-style search-close">
