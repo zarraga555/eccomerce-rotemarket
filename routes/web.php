@@ -25,6 +25,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});
 
-// Me gileo x2
+    Route::get('/pos', function (){
+        return 'hola';
+    })->name('pos');
+});
