@@ -26,7 +26,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/pos', function (){
-        return 'hola';
-    })->name('pos');
+    Route::get('/admin/pos', \App\Livewire\PosController::class);
 });
