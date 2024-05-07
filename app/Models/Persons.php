@@ -28,6 +28,11 @@ class Persons extends Model
         'user_id'
     ];
 
+//    public static function where(string $column, string $condition, string $search)
+//    {
+//        return Persons::where($column, $condition, $search);
+//    }
+
     public function Users() : BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
