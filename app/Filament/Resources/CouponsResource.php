@@ -10,8 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
 class CouponsResource extends Resource
@@ -33,10 +31,30 @@ class CouponsResource extends Resource
                     ->label(__('Coupon code')),
                 Forms\Components\TextInput::make('percentage')
                     ->numeric()
-                    ->label(__('Percentage discount')),
+                    ->dehydrated()
+                    ->live()
+                    ->label(__('Percentage discount'))
+//                    This function means that if there is data in the corresponding inputs, one of them is disabled.
+                    ->disabled(function ( $state, Forms\Set $set, $get){
+                        if ($get('cash') != ''){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }),
                 Forms\Components\TextInput::make('cash')
                     ->numeric()
-                    ->label(__('Money discount')),
+                    ->label(__('Money discount'))
+                    ->live()
+                    ->dehydrated()
+//                    This function means that if there is data in the corresponding inputs, one of them is disabled.
+                    ->disabled(function ( $state, Forms\Set $set, $get){
+                        if ($get('percentage') != ''){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }),
                 Forms\Components\DatePicker::make('coupon_end_date')
                     ->displayFormat('d/m/Y')
                     ->label(__('Coupon expiration'))
@@ -78,18 +96,6 @@ class CouponsResource extends Resource
                 Tables\Columns\IconColumn::make('state')
                     ->boolean()
                     ->label(__('Will the coupon be available?')),
-//                Tables\Columns\TextColumn::make('created_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
-//                Tables\Columns\TextColumn::make('updated_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
-//                Tables\Columns\TextColumn::make('deleted_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
