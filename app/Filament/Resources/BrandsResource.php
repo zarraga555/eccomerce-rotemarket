@@ -9,9 +9,8 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
 class BrandsResource extends Resource
@@ -24,9 +23,9 @@ class BrandsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Hidden::make('created_by')
+                Forms\Components\Hidden::make('creat_by')
                     ->default(Auth::id())
-                    ->label(__('Created by')),
+                    ->label('Created by'),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255)
@@ -34,6 +33,11 @@ class BrandsResource extends Resource
                 Forms\Components\TextInput::make('description')
                     ->maxLength(255)
                     ->label(__('description')),
+                Forms\Components\FileUpload::make('pathImage')
+                    ->directory('brands')
+                    ->image()
+                    ->preserveFilenames()
+                    ->label(__('Upload image')),
             ]);
     }
 
@@ -41,28 +45,15 @@ class BrandsResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('creat_by')
-                    ->numeric()
-                    ->sortable()
-                    ->label(__('Created by')),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->label(__('Name')),
                 Tables\Columns\TextColumn::make('description')
                     ->searchable()
                     ->label(__('description')),
-//                Tables\Columns\TextColumn::make('created_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
-//                Tables\Columns\TextColumn::make('updated_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
-//                Tables\Columns\TextColumn::make('deleted_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
+                ImageColumn::make('pathImage')
+                    ->circular()
+                    ->label(__('Logo')),
             ])
             ->filters([
                 //
