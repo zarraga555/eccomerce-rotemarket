@@ -80,7 +80,7 @@ class CouponsResource extends Resource
                 Tables\Columns\TextColumn::make('percentage')
                     ->numeric()
                     ->sortable()
-                    ->label(__('Percentage discount')),
+                    ->label(__('% discount')),
                 Tables\Columns\TextColumn::make('cash')
                     ->numeric()
                     ->sortable()
@@ -88,14 +88,14 @@ class CouponsResource extends Resource
                 Tables\Columns\TextColumn::make('coupon_end_date')
                     ->date()
                     ->sortable()
-                    ->label(__('Coupon expiration')),
+                    ->label(__('Expiration')),
                 Tables\Columns\TextColumn::make('maximum_use_limit')
                     ->numeric()
                     ->sortable()
-                    ->label(__('Maximum coupon usage limit')),
+                    ->label(__('Amount of use')),
                 Tables\Columns\IconColumn::make('state')
                     ->boolean()
-                    ->label(__('Will the coupon be available?')),
+                    ->label(__('Available?')),
             ])
             ->filters([
                 //
