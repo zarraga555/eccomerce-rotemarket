@@ -16,6 +16,7 @@ class Brands extends Model
         'name',
         'description',
         'creat_by',
+        'pathImage',
     ];
 
     public function Users(): BelongsTo
