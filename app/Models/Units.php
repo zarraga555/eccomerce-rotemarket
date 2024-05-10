@@ -16,6 +16,7 @@ class Units extends Model
         'name',
         'description',
         'creat_by',
+        'acronym'
     ];
 
     public function Users() : BelongsTo

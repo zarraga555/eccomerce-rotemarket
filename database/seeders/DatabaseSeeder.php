@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(PermissioinsSeeder::class);
+        $this->call(UnitsSeeder::class);
     }
 }

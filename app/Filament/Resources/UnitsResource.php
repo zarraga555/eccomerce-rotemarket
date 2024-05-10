@@ -10,8 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
 class UnitsResource extends Resource
@@ -31,10 +29,13 @@ class UnitsResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->label(__('Name')),
-                Forms\Components\TextInput::make('description')
+                Forms\Components\TextInput::make('acronym')
                     ->required()
                     ->maxLength(255)
-                    ->label(__('description')),
+                    ->label(__('Acronym')),
+                Forms\Components\TextInput::make('description')
+                    ->maxLength(255)
+                    ->label(__('Description')),
             ]);
     }
 
@@ -45,21 +46,13 @@ class UnitsResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->label(__('Name')),
+                Tables\Columns\TextColumn::make('acronym')
+                    ->searchable()
+                    ->label(__('Acronym')),
                 Tables\Columns\TextColumn::make('description')
                     ->searchable()
                     ->label(__('Description')),
-//                Tables\Columns\TextColumn::make('created_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
-//                Tables\Columns\TextColumn::make('updated_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
-//                Tables\Columns\TextColumn::make('deleted_at')
-//                    ->dateTime()
-//                    ->sortable()
-//                    ->toggleable(isToggledHiddenByDefault: true),
+
             ])
             ->filters([
                 //
