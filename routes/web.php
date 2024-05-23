@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('dashboard');
+})->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -28,3 +28,10 @@ Route::middleware([
 
     Route::get('/admin/pos', \App\Livewire\PosController::class);
 });
+// Auth
+Route::get('/login-customer', \App\Livewire\Customer\LoginCustomer::class)->name('loginCustomer');
+Route::get('/register-customer', \App\Livewire\Customer\RegisterCustomer::class)->name('registerCustomer');
+Route::get('/forget-password-customer', \App\Livewire\Customer\ForgetPasswordCustomer::class)->name('forgetPasswordCustomer');
+Route::get('/privacy-policy', function (){
+    return "Privacy Policy";
+})->name('privacyPolicy');
