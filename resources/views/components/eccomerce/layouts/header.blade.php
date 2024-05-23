@@ -2,12 +2,14 @@
     <div class="mobile-promotion">
         <span>{{__("Grand opening")}}, <strong>{{__("up to")}} 15%</strong> {{__("off all items. Only")}} <strong>3 {{__('days left')}}</strong></span>
     </div>
-    <x-eccomerce.layouts.header.headertop/>
+    @if(Request::route()->getName() != 'loginCustomer')
+        <x-eccomerce.layouts.header.headertop/>
+    @endif
     <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><x-eccomerce.layouts.logo/></a>
+                    <a href="/"><x-eccomerce.layouts.logo style="height: 62px;"/></a>
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
@@ -84,7 +86,7 @@
                     <x-eccomerce.layouts.header.bottomheader.menu/>
                 </div>
                     <x-eccomerce.layouts.header.bottomheader.contact/>
-                    
+
                 <div class="header-action-icon-2 d-block d-lg-none">
                     <div class="burger-icon burger-icon-white">
                         <span class="burger-icon-top"></span>
