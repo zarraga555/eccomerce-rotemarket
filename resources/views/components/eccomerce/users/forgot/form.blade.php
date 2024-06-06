@@ -1,4 +1,5 @@
-<form method="post">
+<form method="POST" action="{{ route('password.email') }}">
+    @csrf
     <div class="form-group">
         <input type="text" required="" name="email" placeholder="{{__("Username or Email *")}}"/>
     </div>
@@ -26,7 +27,7 @@
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-heading btn-block hover-up" name="login">
-            {{__("Reset password")}}
+            {{ __('Email Password Reset Link') }}
         </button>
     </div>
 </form>
