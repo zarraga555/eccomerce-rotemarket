@@ -14,5 +14,10 @@
     <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>{{__("Setting")}}</a>
 </li>
 <li>
-    <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>{{__("Sign out")}}</a>
+    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fi fi-rs-sign-out mr-10"></i>{{__("Sign out")}}</a>
 </li>
+
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+    @csrf
+</form>
