@@ -1,4 +1,5 @@
-<form method="post">
+<form method="POST" action="{{ route('register') }}">
+    @csrf
     <div class="form-group">
         <input type="text" required="" name="username" placeholder="{{__("Username")}}" />
     </div>
@@ -9,7 +10,7 @@
         <input required="" type="password" name="password" placeholder="{{__("Password")}}" />
     </div>
     <div class="form-group">
-        <input required="" type="password" name="password" placeholder="{{__("Confirm password")}}" />
+        <input required="" type="password" name="password_confirmation" placeholder="{{__("Confirm password")}}" />
     </div>
 {{--    Captcha comentado--}}
 {{--    <div class="login_footer form-group">--}}
