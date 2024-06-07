@@ -9,11 +9,11 @@
             <x-eccomerce.layouts.header.middleheader.account.listAccount/>
         </ul>
         @endauth
-        
+
         @guest
             <ul>
                 <li>
-                    <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>{{__("Login")}}</a>
+                    <a href="{{ route('login') }}"><i class="fi fi-rs-sign-out mr-10"></i>{{__("Login")}}</a>
                 </li>
             </ul>
         @endguest

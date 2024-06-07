@@ -8,7 +8,7 @@
                     <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0 wow animate__animated animate__fadeInUp"
                          data-wow-delay="0">
                         <div class="logo">
-                            <a href="index.html" class="mb-15"><x-eccomerce.layouts.logo style="max-width: 55%"/></a>
+                            <a href="/" class="mb-15"><x-eccomerce.layouts.logo style="max-width: 55%"/></a>
                             {{-- <p class="font-lg text-heading">Awesome grocery store website template</p> --}}
                         </div>
                         <x-eccomerce.layouts.footer.contactinfo/>
@@ -17,24 +17,24 @@
                 <div class="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                 <h4 class=" widget-title">{{__("Company")}}</h4>
                 <ul class="footer-list mb-sm-5 mb-md-0">
-                    <li><a href="#">{{__("About Us")}}</a></li>
-                    <li><a href="#">{{__("Delivery Information")}}</a></li>
-                    <li><a href="#">{{__("Privacy Policy")}}</a></li>
-                    <li><a href="#">{{__("Terms & Conditions")}}</a></li>
-                    <li><a href="#">{{__("Contact Us")}}</a></li>
-                    <li><a href="#">{{__("Support Center")}}</a></li>
-                    <li><a href="#">{{__("Careers")}}</a></li>
+                    <li><a href="{{ route('aboutUs') }}">{{__("About Us")}}</a></li>
+                    <li><a href="{{ route('shippingPolicy') }}">{{__("Delivery Information")}}</a></li>
+                    <li><a href="{{ route('privacyPolicy') }}">{{__("Privacy Policy")}}</a></li>
+                    <li><a href="{{ route('termsAndConditions') }}">{{__("Terms & Conditions")}}</a></li>
+                    <li><a href="{{ route('contactUs') }}">{{__("Contact Us")}}</a></li>
+                    <li><a href="{{ route('assistanceCenter') }}">{{__("Support Center")}}</a></li>
+                    <li><a href="{{ route('jobOffers') }}">{{__("Careers")}}</a></li>
                 </ul>
             </div>
             <div class="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
                 <h4 class="widget-title">{{__("Account")}}</h4>
                 <ul class="footer-list mb-sm-5 mb-md-0">
-                    <li><a href="#">{{__("Sign In")}}</a></li>
-                    <li><a href="#">{{__("View Cart")}}</a></li>
-                    <li><a href="#">{{__("My Wishlist")}}</a></li>
-                    <li><a href="#">{{__("Track My Order")}}</a></li>
-                    <li><a href="#">{{__("Help Ticket")}}</a></li>
-                    <li><a href="#">{{__("Shipping Details")}}</a></li>
+                    <li><a href="{{ route('login') }}">{{__("Sign In")}}</a></li>
+                    <li><a href="{{ route('cart') }}">{{__("View Cart")}}</a></li>
+                    <li><a href="{{ route('wishlist') }}">{{__("My Wishlist")}}</a></li>
+                    <li><a href="{{ route('trackOrder') }}">{{__("Track My Order")}}</a></li>
+                    <li><a href="{{ route('helpTickets') }}">{{__("Help Ticket")}}</a></li>
+                    <li><a href="{{ route('shippingDetails') }}">{{__("Shipping Details")}}</a></li>
                     {{-- <li><a href="#">Compare products</a></li> --}}
                 </ul>
             </div>

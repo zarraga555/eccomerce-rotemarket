@@ -35,23 +35,6 @@
             </div>
         </div>
     </div>
-
-{{--    <!-- Responsive Navigation Menu -->--}}
-{{--    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">--}}
-{{--        <x-eccomerce.admin.navbar.responsive.nav_link/>--}}
-{{--        <!-- Responsive Settings Options -->--}}
-{{--        <div class="pt-4 pb-1 border-t">--}}
-{{--            <div class="flex items-center px-4">--}}
-{{--                <x-eccomerce.admin.navbar.responsive.user/>--}}
-{{--            </div>--}}
-
-{{--            <div class="mt-3 space-y-1">--}}
-{{--                <!-- Account Management -->--}}
-{{--                <!-- Authentication -->--}}
-{{--                <x-eccomerce.admin.navbar.responsive.logout/>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
 </nav>
 
 <script type="text/javascript">

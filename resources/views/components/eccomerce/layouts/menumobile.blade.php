@@ -2,7 +2,7 @@
     <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-top">
             <div class="mobile-header-logo">
-                <a href="index.html">
+                <a href="#">
                     <x-eccomerce.layouts.logo style="min-width: 100px !important;
                     width: 100px;"/>
 
