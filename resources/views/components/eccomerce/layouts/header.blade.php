@@ -2,9 +2,7 @@
     <div class="mobile-promotion">
         <span>{{__("Grand opening")}}, <strong>{{__("up to")}} 15%</strong> {{__("off all items. Only")}} <strong>3 {{__('days left')}}</strong></span>
     </div>
-    @if(Request::route()->getName() != 'loginCustomer')
         <x-eccomerce.layouts.header.headertop/>
-    @endif
     <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
         <div class="container">
             <div class="header-wrap">
@@ -13,26 +11,26 @@
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
-                        <form action="#">
-                            <select class="select-active">
-                                <option>{{__("All Categories")}}</option>
-                                <option>Milks and Dairies</option>
-                                <option>Wines & Alcohol</option>
-                                <option>Clothing & Beauty</option>
-                                <option>Pet Foods & Toy</option>
-                                <option>Fast food</option>
-                                <option>Baking material</option>
-                                <option>Vegetables</option>
-                                <option>Fresh Seafood</option>
-                                <option>Noodles & Rice</option>
-                                <option>Ice cream</option>
-                            </select>
+                        <form action="#" style="max-width: 600px;">
+{{--                            <select class="select-active">--}}
+{{--                                <option>{{__("All Categories")}}</option>--}}
+{{--                                <option>Milks and Dairies</option>--}}
+{{--                                <option>Wines & Alcohol</option>--}}
+{{--                                <option>Clothing & Beauty</option>--}}
+{{--                                <option>Pet Foods & Toy</option>--}}
+{{--                                <option>Fast food</option>--}}
+{{--                                <option>Baking material</option>--}}
+{{--                                <option>Vegetables</option>--}}
+{{--                                <option>Fresh Seafood</option>--}}
+{{--                                <option>Noodles & Rice</option>--}}
+{{--                                <option>Ice cream</option>--}}
+{{--                            </select>--}}
                             <input type="text" placeholder="{{__("Search for items...")}}"/>
                         </form>
                     </div>
                     <div class="header-action-right">
                         <div class="header-action-2">
-                            <div class="search-location">
+                            <div class="search-location" style="display: initial">
                                 <form action="#">
                                     <select class="select-active">
                                         <option>{{__("Your Location")}}</option>
@@ -52,20 +50,15 @@
                                     </select>
                                 </form>
                             </div>
-                            {{-- <div class="header-action-icon-2">
-                                <a href="shop-compare.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-compare.svg"/>
-                                    <span class="pro-count blue">3</span>
-                                </a>
-                                <a href="shop-compare.html"><span class="lable ml-0">{{__("Compare")}}</span></a>
-                            </div> --}}
-                            <div class="header-action-icon-2">
-                                <a href="shop-wishlist.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg"/>
-                                    <span class="pro-count blue">6</span>
-                                </a>
-                                <a href="shop-wishlist.html"><span class="lable">{{__("Wishlist")}}</span></a>
-                            </div>
+                            @auth
+                                <div class="header-action-icon-2">
+                                    <a href="{{route('wishlist')}}">
+                                        <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg"/>
+                                        <span class="pro-count blue">6</span>
+                                    </a>
+                                    <a href="shop-wishlist.html"><span class="lable">{{__("Wishlist")}}</span></a>
+                                </div>
+                            @endauth
                             <x-eccomerce.layouts.header.middleheader.cart.cartoption/>
                             <x-eccomerce.layouts.header.middleheader.account.accountoption/>
                         </div>
@@ -74,6 +67,8 @@
             </div>
         </div>
     </div>
+
+{{--    Header Responsibe mobile--}}
     <div class="header-bottom header-bottom-bg-color sticky-bar">
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
@@ -96,12 +91,14 @@
                 </div>
                 <div class="header-action-right d-block d-lg-none">
                     <div class="header-action-2">
-                        <div class="header-action-icon-2">
-                            <a href="shop-wishlist.html">
-                                <img alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg"/>
-                                <span class="pro-count white">4</span>
-                            </a>
-                        </div>
+                        @auth
+                            <div class="header-action-icon-2">
+                                <a href="{{route('wishlist')}}">
+                                    <img alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg"/>
+                                    <span class="pro-count white">4</span>
+                                </a>
+                            </div>
+                        @endauth
                         <div class="header-action-icon-2">
                             <a class="mini-cart-icon" href="#">
                                 <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg"/>
