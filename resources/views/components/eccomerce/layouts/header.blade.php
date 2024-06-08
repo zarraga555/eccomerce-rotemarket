@@ -73,7 +73,7 @@
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
                 <div class="logo logo-width-1 d-block d-lg-none">
-                    <a href="index.html"><x-eccomerce.layouts.logo style="width: 100px;
+                    <a href="/"><x-eccomerce.layouts.logo style="width: 100px;
                         min-width: 100px;"/></a>
                 </div>
                 <div class="header-nav d-none d-lg-flex">
@@ -100,7 +100,7 @@
                             </div>
                         @endauth
                         <div class="header-action-icon-2">
-                            <a class="mini-cart-icon" href="#">
+                            <a class="mini-cart-icon" href="{{ route('myCart') }}">
                                 <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg"/>
                                 <span class="pro-count white">2</span>
                             </a>
