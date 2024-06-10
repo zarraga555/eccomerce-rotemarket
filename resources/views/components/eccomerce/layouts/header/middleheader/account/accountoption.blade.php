@@ -1,8 +1,8 @@
 <div class="header-action-icon-2">
-    <a href="page-account.html">
+    <a href="{{ route('myAccount') }}">
         <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-user.svg"/>
     </a>
-    <a href="page-account.html"><span class="lable ml-0">{{__("Account")}}</span></a>
+    <a href="{{ route('myAccount') }}"><span class="lable ml-0">{{__("Account")}}</span></a>
     <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
         @auth
         <ul>
