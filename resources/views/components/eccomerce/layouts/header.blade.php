@@ -56,7 +56,7 @@
                                         <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg"/>
                                         <span class="pro-count blue">6</span>
                                     </a>
-                                    <a href="shop-wishlist.html"><span class="lable">{{__("Wishlist")}}</span></a>
+                                    <a href="{{route('wishlist')}}"><span class="lable">{{__("Wishlist")}}</span></a>
                                 </div>
                             @endauth
                             <x-eccomerce.layouts.header.middleheader.cart.cartoption/>
