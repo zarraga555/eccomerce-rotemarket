@@ -45,7 +45,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('my-account#voucher', \App\Livewire\Ecommerce\MyAccount::class)->name('myVoucher');
     Route::get('my-account#orders', \App\Livewire\Ecommerce\MyAccount::class)->name('trackOrder');
     Route::get('my-account#account-detail', \App\Livewire\Ecommerce\MyAccount::class)->name('accountDetails');
-    Route::get('my-cart', function (){ return "Cart";})->name('myCart');
+    Route::get('my-cart', \App\Livewire\Ecommerce\MyCart::class)->name('myCart');
     Route::get('my-wishlist', function (){return "Wishlist";})->name('wishlist');
     Route::get('help-tickets', function (){})->name('helpTickets');
     Route::get('shipping-details', function (){})->name('shippingDetails');
