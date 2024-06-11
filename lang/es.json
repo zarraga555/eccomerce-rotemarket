@@ -207,5 +207,7 @@
     "Using A Promo Code?" : "Tienes un Cupon?",
     "Enter Your Coupon" : "Ingresa tu cupon",
     "Apply" : "Aplicar",
-    "Proceed To CheckOut" : "Continuar con el Pago"
+    "Proceed To CheckOut" : "Continuar con el Pago",
+    "Shipping" : "Envio",
+    "Estimate for" : "Envio a: "
 }
