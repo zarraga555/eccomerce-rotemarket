@@ -287,7 +287,7 @@
 {{--                                </form>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
-                        <div class="col-lg-5">
+                        <div class="col-lg-6">
                             <div class="p-40">
                                 <h4 class="mb-10">{{ __('Apply Coupon') }}</h4>
                                 <p class="mb-30"><span class="font-lg text-muted">{{ __('Using A Promo Code?') }}</span></p>
