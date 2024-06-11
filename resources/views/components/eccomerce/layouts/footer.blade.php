@@ -30,7 +30,7 @@
                 <h4 class="widget-title">{{__("Account")}}</h4>
                 <ul class="footer-list mb-sm-5 mb-md-0">
                     <li><a href="{{ route('login') }}">{{__("Sign In")}}</a></li>
-                    <li><a href="{{ route('cart') }}">{{__("View Cart")}}</a></li>
+                    <li><a href="{{ route('myCart') }}">{{__("View Cart")}}</a></li>
                     <li><a href="{{ route('wishlist') }}">{{__("My Wishlist")}}</a></li>
                     <li><a href="{{ route('trackOrder') }}">{{__("Track My Order")}}</a></li>
                     <li><a href="{{ route('helpTickets') }}">{{__("Help Ticket")}}</a></li>

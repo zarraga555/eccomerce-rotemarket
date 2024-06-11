@@ -40,10 +40,13 @@ Route::get('job-offers', function (){})->name('jobOffers');
 
 /// Company Private Routes Customer Account
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('my-account', function (){return "My Account";})->name('myAccount');
-    Route::get('my-cart', function (){ return "Cart";})->name('cart');
+//    Account Single Page
+    Route::get('my-account', \App\Livewire\Ecommerce\MyAccount::class)->name('myAccount');
+    Route::get('my-account#voucher', \App\Livewire\Ecommerce\MyAccount::class)->name('myVoucher');
+    Route::get('my-account#orders', \App\Livewire\Ecommerce\MyAccount::class)->name('trackOrder');
+    Route::get('my-account#account-detail', \App\Livewire\Ecommerce\MyAccount::class)->name('accountDetails');
+    Route::get('my-cart', \App\Livewire\Ecommerce\MyCart::class)->name('myCart');
     Route::get('my-wishlist', function (){return "Wishlist";})->name('wishlist');
-    Route::get('track-order', function (){return "Track Order";})->name('trackOrder');
     Route::get('help-tickets', function (){})->name('helpTickets');
     Route::get('shipping-details', function (){})->name('shippingDetails');
 });
