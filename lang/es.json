@@ -194,5 +194,18 @@
     "My Address" : "Mis Direcciones",
     "Track Your Order" : "Rastrear mi Pedido",
     "Orders" : "Mis Pedidos",
-    "Dashboard" : "Inicio"
+    "Dashboard" : "Inicio",
+    "Your Cart" : "Tu Carrito,",
+    "There are" : "Tienes",
+    "products in your cart" : "productos en tu carrito",
+    "Unit Price" : "Precio Unidad",
+    "Quantity" : "Cantidad",
+    "Remove" : "Borrar",
+    "Clear Cart" : "Linpiar Carrito",
+    "Continue Shopping" : "Continuar Comprando",
+    "Apply Coupon" : "Agregar un Cupon",
+    "Using A Promo Code?" : "Tienes un Cupon?",
+    "Enter Your Coupon" : "Ingresa tu cupon",
+    "Apply" : "Aplicar",
+    "Proceed To CheckOut" : "Continuar con el Pago"
 }
