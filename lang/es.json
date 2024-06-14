@@ -209,5 +209,13 @@
     "Apply" : "Aplicar",
     "Proceed To CheckOut" : "Continuar con el Pago",
     "Shipping" : "Envio",
-    "Estimate for" : "Envio a: "
+    "Estimate for" : "Envio a: ",
+    "products in this list" : "productos guardados",
+    "Your Wishlist" : "Tus Favoritos",
+    "Price" : "Precio",
+    "Stock Status" : "Existencias",
+    "Action" : "Accion",
+    "In Stock" : "Disponible",
+    "Out Stock" : "No Disponible",
+    "Add to cart" : "Añadir al carrito"
 }
