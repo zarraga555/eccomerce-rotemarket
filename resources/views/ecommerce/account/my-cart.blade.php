@@ -15,8 +15,7 @@
                     </div>
                     <div class="divider-2 mb-30"></div>
                     <div class="cart-action d-flex justify-content-between">
-                        <a class="btn "><i class="fi-rs-arrow-left mr-10"></i>Continue Shopping</a>
-                        <a class="btn  mr-10 mb-sm-15"><i class="fi-rs-refresh mr-10"></i>Update Cart</a>
+                        <a class="btn "><i class="fi-rs-arrow-left mr-10"></i>{{ __('Continue Shopping') }}</a>
                     </div>
                     <div class="row mt-50">
 {{--                        <div class="col-lg-7">--}}
@@ -288,14 +287,14 @@
 {{--                                </form>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
-                        <div class="col-lg-5">
+                        <div class="col-lg-6">
                             <div class="p-40">
-                                <h4 class="mb-10">Apply Coupon</h4>
-                                <p class="mb-30"><span class="font-lg text-muted">Using A Promo Code?</span></p>
+                                <h4 class="mb-10">{{ __('Apply Coupon') }}</h4>
+                                <p class="mb-30"><span class="font-lg text-muted">{{ __('Using A Promo Code?') }}</span></p>
                                 <form action="#">
                                     <div class="d-flex justify-content-between">
-                                        <input class="font-medium mr-15 coupon" name="Coupon" placeholder="Enter Your Coupon">
-                                        <button class="btn"><i class="fi-rs-label mr-10"></i>Apply</button>
+                                        <input class="font-medium mr-15 coupon" name="Coupon" placeholder="{{ __('Enter Your Coupon') }}">
+                                        <button class="btn"><i class="fi-rs-label mr-10"></i>{{ __('Apply') }}</button>
                                     </div>
                                 </form>
                             </div>
@@ -309,7 +308,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="cart_total_label">
-                                        <h6 class="text-muted">Subtotal</h6>
+                                        <h6 class="text-muted">{{ __('Subtotal') }}</h6>
                                     </td>
                                     <td class="cart_total_amount">
                                         <h4 class="text-brand text-end">$12.31</h4>
@@ -322,12 +321,12 @@
                                 </tr>
                                 <tr>
                                     <td class="cart_total_label">
-                                        <h6 class="text-muted">Shipping</h6>
+                                        <h6 class="text-muted">{{ __('Shipping') }}</h6>
                                     </td>
                                     <td class="cart_total_amount">
                                         <h5 class="text-heading text-end">Free</h5></td> </tr> <tr>
                                     <td class="cart_total_label">
-                                        <h6 class="text-muted">Estimate for</h6>
+                                        <h6 class="text-muted">{{ __('Estimate for') }}</h6>
                                     </td>
                                     <td class="cart_total_amount">
                                         <h5 class="text-heading text-end">United Kingdom</h5></td> </tr> <tr>
@@ -346,7 +345,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="#" class="btn mb-20 w-100">Proceed To CheckOut<i class="fi-rs-sign-out ml-15"></i></a>
+                        <a href="#" class="btn mb-20 w-100">{{ __('Proceed To CheckOut') }}<i class="fi-rs-sign-out ml-15"></i></a>
                     </div>
                 </div>
             </div>
